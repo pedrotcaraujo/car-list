@@ -1,0 +1,28 @@
+.App {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 80px;
+}
+  
+.App-header {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #BCD13D
+}
+
+.App-navbarLogo {
+    padding: 25px 0;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.App-navbarLogo-link {
+    font-weight: 700;
+    font-size: x-large;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    border: 2px solid #fff;
+
+}

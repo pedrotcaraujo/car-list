@@ -1,0 +1,63 @@
+.CarList {
+    margin: 40px 0;
+}
+
+.CarList-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.CarBlock {
+    margin: 10px 5px;
+    padding: 15px 5px;
+    box-sizing: border-box;
+}
+
+.CarBlock:hover {
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+}
+
+.CarBlock-link {
+    color: #000;
+    text-decoration: none;
+}
+
+.CarBlock-img {
+    margin: 10px;
+}
+
+.CarBlock-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.CarBlock-info-item {
+    background-color: #000;
+    border: thin solid #000;
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin: 5px;
+    color: #fff;
+    font-size: small;
+    font-weight: 100;
+}
+
+.CarBlock-vendor {
+    border: thin solid #bcd13d;
+    background-color: #bcd13d
+}
+
+.CarBlock-price {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 200;
+    margin-top: 15px;
+}
+
+.CarBlock-price:before {
+    content: '$'
+}
