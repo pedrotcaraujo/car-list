@@ -1,5 +1,10 @@
 .CarList {
-    margin: 40px 0;
+    margin-bottom: 40px;
+}
+
+.CarList-section-name {
+    border-bottom: 3px solid #bcd13d;
+    padding: 5px 1px;
 }
 
 .CarList-items {
@@ -7,6 +12,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.CarList-section .CarList-items {
+    justify-content: flex-start;
 }
 
 .CarBlock {

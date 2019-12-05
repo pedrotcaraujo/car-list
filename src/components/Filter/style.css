@@ -1,35 +1,35 @@
 .Filter {
-    width: 100%;
+    margin-top: 40px;
     box-shadow: 0 2px 9px -3px rgba(0,0,0,.12);
 }
 
-.order, .order-list {
+.OrderFilter, .OrderFilter-list {
     display: flex;
     padding: 0;
 }
 
-.order-item {
+.OrderFilter-item {
     margin: 0 10px;
     list-style: none;
 }
 
-.order-item input {
+.OrderFilter-item input {
     display: none;
 }
 
-.order-title, .order-item span {
+.OrderFilter-title, .OrderFilter-item span {
     padding: 5px;
     font-weight: 700;
 }
 
-.order-item span {
+.OrderFilter-item span {
     display: inline-block;
     text-align: center;
     min-width: 60px;
     border: 2px solid #000;
 }
 
-.order-item input:checked + span {
+.OrderFilter-item input:checked + span {
     color: #BCD13D;
     border: 2px solid #BCD13D;
 }

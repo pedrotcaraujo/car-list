@@ -1,0 +1,18 @@
+.Itinerary {
+    margin-top: 40px;
+}
+
+.Itinerary-info {
+    font-size: small;
+    font-weight: 700;
+}
+
+.Itinerary-info span {
+    padding: 0 5px;
+    font-weight: 100;
+}
+
+.Itinerary .container {
+    display: flex;
+    justify-content: flex-end;
+}

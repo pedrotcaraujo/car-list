@@ -1,9 +1,9 @@
 import {BehaviorSubject} from 'rxjs';
-import uuidv1 from 'uuid/v1'
+import crypto from 'crypto-js'
 import data from '../data.json';
 import OrderFilterConstant from '../constants/OrderFilterConstant';
 
-const VehVendorAvails = data[0].VehAvailRSCore.VehVendorAvails.map(createCarUUIDs)
+const VehVendorAvails = data[0].VehAvailRSCore.VehVendorAvails.map(createCarIDs)
 const VehRentalCore = data[0].VehAvailRSCore.VehRentalCore
 
 export default new BehaviorSubject({
@@ -14,9 +14,12 @@ export default new BehaviorSubject({
     }
 })
 
-function createCarUUIDs(VehVendor) {
-    const VehAvails = VehVendor.VehAvails.map(car => ({...car, UUID: uuidv1()}))
-
+function createCarIDs(VehVendor) {
+    const VehAvails = VehVendor.VehAvails.map((car, index) => (
+        {   ...car, 
+            ID: `${crypto.MD5(car.Vehicle.VehMakeModel['@Name'])}${index}`
+        }
+    ))
     return {
         Vendor: VehVendor.Vendor,
         VehAvails

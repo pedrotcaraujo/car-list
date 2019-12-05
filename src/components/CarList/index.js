@@ -1,34 +1,69 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import './style.css';
-import useCarsByOrder from '../../hooks/useCarsByOrder';
+import useListAll from './useListAll';
+import useListVendors from './useListVendors';
 
-export default function CarList() {
-    const cars = useCarsByOrder()
+export default function CarList(props) {
+    const { showAll } = props
+
     return (
         <section className="CarList">
             <div className="container">
-                <div className="CarList-items">
-                    {cars && cars.map((car) => (
-                        <CarBlock
-                            key={car['UUID']}
-                            status={car['@Status']}
-                            vehicle={car['Vehicle']}
-                            vendor={car['Vendor']}
-                            totalCharge={car['TotalCharge']}
-                        />
-                    ))}
-                </div>
+                {showAll ? <CarListAll /> : <CarListVendors /> }
             </div>
         </section>
     )
 }
 
+function CarListVendors() {
+    const vehVendorAvails = useListVendors()
+    return (
+        <>
+            {vehVendorAvails && vehVendorAvails.map((item) => (
+                <section key={item.Vendor['@Code']} className="CarList-section">
+                    <h2 className="CarList-section-name">{item.Vendor['@Name']}</h2>
+                    <div className="CarList-items">
+                        {item.VehAvails.map((car) => (
+                            <CarBlock
+                                key={car['ID']}
+                                id={car['ID']}
+                                status={car['@Status']}
+                                vehicle={car['Vehicle']}
+                                vendor={item['Vendor']}
+                                totalCharge={car['TotalCharge']}
+                            />
+                        ))}
+                    </div>
+                </section>
+            ))}
+        </>
+    )
+}
+
+function CarListAll() {
+    const cars = useListAll()
+    return (
+        <div className="CarList-items">
+            {cars && cars.map((car) => (
+                <CarBlock
+                    key={car['ID']}
+                    id={car['ID']}
+                    status={car['@Status']}
+                    vehicle={car['Vehicle']}
+                    vendor={car['Vendor']}
+                    totalCharge={car['TotalCharge']}
+                />
+            ))}
+        </div>
+    )
+}
+
 function CarBlock(props) {
-    const { vehicle, totalCharge, vendor} = props;
-    console.log(vehicle)
+    const { vehicle, totalCharge, vendor, id} = props;
     return (
         <div className="CarBlock">
-            <a className="CarBlock-link" href="/">
+            <Link className="CarBlock-link" to={`/car/${id}`}>
                 <figure>
                     <img
                         className="CarBlock-img"
@@ -56,7 +91,7 @@ function CarBlock(props) {
                         </div>
                     </div>
                 </div>
-            </a>
+            </Link>
         </div>
     )
 }

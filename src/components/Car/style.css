@@ -1,0 +1,40 @@
+.Car {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Car {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Car-info {
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 100;
+}
+
+.Car-info dt, .Car-info dd {
+    flex-basis: 50%;
+    margin: 0;
+    padding: 10px 5px;
+    border-bottom: thin solid #000;
+    box-sizing: border-box;
+}
+
+.Car-info dd:last-child:before {
+    content: '$'
+}
+
+.Car-info dt:after {
+    content: ':'
+}
+
+.Car-info dt {
+    font-weight: 700;
+}

@@ -1,24 +1,36 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import './App.css'
-import Filter from './components/Filter';
-import CarList from './components/CarList';
+import CarListPage from './pages/CarListPage'
+import CarPage from './pages/CarPage'
 
 
 
 export default function App() {
   return (
-    <div>
+    <Router>
         <header className="App-header">
             <div className="container">
                 <div className="App-navbarLogo">
-                    <a className="App-navbarLogo-link" href="/" title="CarList">CarTrawler Car List</a>
+                    <Link className="App-navbarLogo-link" to="/">CarTrawler Car List</Link>
                 </div>
             </div>
         </header>
-      <div>
-        <Filter />
-        <CarList />
+      <div>        
+          <Switch>
+            <Route path="/car/:id">
+              <CarPage/>
+            </Route>
+            <Route path="/">
+              <CarListPage />
+            </Route>
+          </Switch>
       </div>
-    </div>
+    </Router>
   );
 }
