@@ -12,7 +12,7 @@ CarTrawler Car List client built with React and Rxjs. Try the [live demo](https:
 
 
 # CarTrawler Car List website:
- - List all cars avaiable
+ - List all avaiable cars
  - List cars avaiable by vendors
  - Sort cars by Price and Baggage Quantity
  - Show Car page by id
