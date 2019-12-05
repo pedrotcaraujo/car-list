@@ -12,8 +12,6 @@ CarTrawler Car List client built with React and rxjs. Try the [live demo](https:
   - Rxjs for data flow.
   - A dev server that lints for common errors.
   - Import CSS and image files directly from JavaScript.
-  - Autoprefixed CSS, so you don’t need -webkit or other prefixes.
-  - Jest and enzyme for components test.
 
 # Quick-Start Guide
 
