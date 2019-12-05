@@ -36,7 +36,7 @@ export default function Car(props) {
                         <dd>{car.TotalCharge['@RateTotalAmount']}</dd>
                     </dl>
                 </div>
-                <Link to='/'>Back</Link>
+                <Link to='/car-list'>Back</Link>
             </div>
             )}
             

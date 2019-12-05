@@ -63,7 +63,7 @@ function CarBlock(props) {
     const { vehicle, totalCharge, vendor, id} = props;
     return (
         <div className="CarBlock">
-            <Link className="CarBlock-link" to={`/car/${id}`}>
+            <Link className="CarBlock-link" to={`/car-list/car/${id}`}>
                 <figure>
                     <img
                         className="CarBlock-img"

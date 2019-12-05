@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect,
   Link
 } from "react-router-dom";
 import './App.css'
@@ -17,17 +18,20 @@ export default function App() {
         <header className="App-header">
             <div className="container">
                 <div className="App-navbarLogo">
-                    <Link className="App-navbarLogo-link" to="/">CarTrawler Car List</Link>
+                    <Link className="App-navbarLogo-link" to="/car-list">CarTrawler Car List</Link>
                 </div>
             </div>
         </header>
       <div>        
           <Switch>
-            <Route path="/car/:id">
+            <Route path="/car-list/car/:id">
               <CarPage/>
             </Route>
-            <Route path="/">
+            <Route path="/car-list">
               <CarListPage />
+            </Route>
+            <Route exact path="/">
+              <Redirect to="/car-list" />
             </Route>
           </Switch>
       </div>

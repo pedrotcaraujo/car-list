@@ -14,19 +14,19 @@ export default function CarListPage() {
         <>
             <TabGroup>
                 <TabItem>
-                    <Link to="/">All</Link>
+                    <Link to="/car-list">All</Link>
                 </TabItem>
                 <TabItem>
-                    <Link to="/vendors">Vendors</Link>
+                    <Link to="/car-list/vendors">Vendors</Link>
                 </TabItem>
             </TabGroup>
             <Switch>
-                <Route path="/vendors">
+                <Route path="/car-list/vendors">
                     <Filter/>
                     <Itinerary />
                     <CarList showAll={false}/>
                 </Route>
-                <Route path="/">
+                <Route path="/car-list">
                     <Filter/>
                     <Itinerary />
                     <CarList showAll={true}/>
