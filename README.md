@@ -13,8 +13,8 @@ CarTrawler Car List client built with React and Rxjs. Try the [live demo](https:
 
 # CarTrawler Car List website:
  - List all cars avaiable https://pedrotcaraujo.github.io/car-list
- - List cars avaiable by vendors https://pedrotcaraujo.github.io/vendors
- - Show Car page by id https://pedrotcaraujo.github.io/car/9c49b89d49ad051431600a7c1772524d2
+ - List cars avaiable by vendors https://pedrotcaraujo.github.io/car-list/vendors
+ - Show Car page by id https://pedrotcaraujo.github.io/car-list/car/9c49b89d49ad051431600a7c1772524d2
 
 ## by
 @pedrotcaraujo
